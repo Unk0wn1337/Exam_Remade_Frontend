@@ -7,7 +7,7 @@ export const Vocabulary = () => {
     <SortByTopic>
       {(filteredList) => (
         <article>
-          {filteredList.map((element) => (
+          {filteredList && filteredList.map((element) => (
             <VocabularyItem wordList={element} key={element.id} />
           ))}
         </article>

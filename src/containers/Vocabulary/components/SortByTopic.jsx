@@ -5,8 +5,6 @@ import { getWordList } from '../../../api/word.api';
 export const SortByTopic = ({ children }) => {
   const { wordList } = getWordList()
 
-  console.log(wordList)
-
   const [selectedTopic, setSelectedTopic] = useState(TOPIC.ALL)
 
   // if method optimization use useCallback
@@ -18,7 +16,7 @@ export const SortByTopic = ({ children }) => {
   const filteredList = useMemo(() => {
     return selectedTopic === TOPIC.ALL
       ? wordList
-      : wordList.filter((word) => word.topic_id === parseInt(selectedTopic))
+      : wordList?.filter((word) => word.topic_id === parseInt(selectedTopic))
   }, [selectedTopic, wordList])
 
   return (
