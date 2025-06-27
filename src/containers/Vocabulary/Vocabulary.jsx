@@ -5,11 +5,12 @@ import { VocabularyItem } from './components/VocabularyItem'
 export const Vocabulary = () => {
   return (
     <SortByTopic>
-      {(filteredList) => (
+      {(filteredWordList) => (
         <article>
-          {filteredList && filteredList.map((element) => (
-            <VocabularyItem wordList={element} key={element.id} />
-          ))}
+          {filteredWordList &&
+            filteredWordList.map((wordListItem) => (
+              <VocabularyItem wordListItem={wordListItem} key={wordListItem.id} />
+            ))}
         </article>
       )}
     </SortByTopic>

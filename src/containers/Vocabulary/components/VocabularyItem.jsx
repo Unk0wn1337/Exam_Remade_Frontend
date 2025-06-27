@@ -1,22 +1,22 @@
 import React, { useCallback, useState } from 'react'
 
-export const VocabularyItem = ({ wordList }) => {
+export const VocabularyItem = ({ wordListItem }) => {
   const [inputValue, setInputValue] = useState('')
   const [isCorrect, setIsCorrect] = useState(null) // null = még nem ellenőriztünk
 
   const handleCheck = useCallback(
     (e) => {
       e.preventDefault() // ne töltse újra az oldalt form submitkor
-      const correct = inputValue.trim().toLowerCase() === wordList.hungary.trim().toLowerCase()
+      const correct = inputValue.trim().toLowerCase() === wordListItem.hungary.trim().toLowerCase()
       setIsCorrect(correct)
     },
-    [inputValue, wordList.hungary]
+    [inputValue, wordListItem.hungary]
   )
 
   return (
     <div className="element">
       <div className="language">
-        <p>{wordList.english}</p>
+        <p>{wordListItem.english}</p>
       </div>
       <div>
         <form onSubmit={handleCheck} id="v">

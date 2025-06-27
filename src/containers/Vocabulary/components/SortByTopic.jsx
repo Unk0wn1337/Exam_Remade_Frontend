@@ -1,10 +1,9 @@
 import React, { useCallback, useMemo, useState } from 'react'
 import { TOPIC } from '../../../const/topic'
-import { getWordList } from '../../../api/word.api';
+import { useGetWordList } from '../../../api/useGetWordList'
 
 export const SortByTopic = ({ children }) => {
-  const { wordList } = getWordList()
-
+  const { wordList } = useGetWordList()
   const [selectedTopic, setSelectedTopic] = useState(TOPIC.ALL)
 
   // if method optimization use useCallback
