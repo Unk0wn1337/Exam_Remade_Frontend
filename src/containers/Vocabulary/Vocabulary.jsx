@@ -1,14 +1,14 @@
 import React from 'react'
-import { SortByTopic } from './SortByTopic'
-import { Element } from './Element'
+import { SortByTopic } from './components/SortByTopic'
+import { VocabularyItem } from './components/VocabularyItem'
 
-export const Place = () => {
+export const Vocabulary = () => {
   return (
     <SortByTopic>
       {(filteredList) => (
         <article>
           {filteredList.map((element) => (
-            <Element wordList={element} key={element.id} />
+            <VocabularyItem wordList={element} key={element.id} />
           ))}
         </article>
       )}

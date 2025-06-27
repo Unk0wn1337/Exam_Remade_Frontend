@@ -1,6 +1,6 @@
 import React, {useCallback, useState} from 'react'
 
-export const Element = ({ wordList }) => {
+export const VocabularyItem = ({ wordList }) => {
   const [inputValue, setInputValue] = useState('')
   const [isCorrect, setIsCorrect] = useState(null) // null = még nem ellenőriztünk
 

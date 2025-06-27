@@ -1,10 +1,10 @@
 import './App.css'
-import { Place } from './Components/Place'
+import { Vocabulary } from './containers/Vocabulary/Vocabulary'
 
 function App() {
   return (
     <div className="App">
-      <Place />
+      <Vocabulary />
     </div>
   )
 }

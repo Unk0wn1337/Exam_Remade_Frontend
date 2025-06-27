@@ -1,6 +1,6 @@
 import React, {useCallback, useContext, useMemo, useState} from 'react'
-import { ApiContext } from '../Contexts/ApiContext'
-import {TOPIC} from "../const/topic";
+import { ApiContext } from '../../../Contexts/ApiContext'
+import {TOPIC} from "../../../const/topic";
 
 export const SortByTopic = ({ children }) => {
   const { wordList } = useContext(ApiContext)
