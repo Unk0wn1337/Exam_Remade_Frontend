@@ -6,7 +6,7 @@ export const useGetWordList = () => {
     isLoading,
     data: wordList
   } = useQuery({
-    queryKey: ['repoData'],
+    queryKey: ['useGetWordList'],
     queryFn: async () => {
       const { wordList } = await getWordList()
       return wordList
