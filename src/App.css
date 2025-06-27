@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.element{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+}
+
+@media only screen and (max-width: 600px) {
+  article {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  article {
+    grid-template-columns: 1fr;
+  }
+}
