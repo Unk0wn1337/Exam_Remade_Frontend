@@ -1,9 +1,12 @@
-import React, {useCallback, useContext, useMemo, useState} from 'react'
-import { ApiContext } from '../../../Contexts/ApiContext'
-import {TOPIC} from "../../../const/topic";
+import React, { useCallback, useMemo, useState } from 'react'
+import { TOPIC } from '../../../const/topic'
+import { getWordList } from '../../../api/word.api';
 
 export const SortByTopic = ({ children }) => {
-  const { wordList } = useContext(ApiContext)
+  const { wordList } = getWordList()
+
+  console.log(wordList)
+
   const [selectedTopic, setSelectedTopic] = useState(TOPIC.ALL)
 
   // if method optimization use useCallback
