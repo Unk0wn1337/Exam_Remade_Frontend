@@ -1,4 +1,3 @@
-// Place.jsx
 import React from 'react'
 import { SortByTopic } from './SortByTopic'
 import { Element } from './Element'

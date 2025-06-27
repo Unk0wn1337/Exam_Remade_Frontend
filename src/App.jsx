@@ -1,4 +1,3 @@
-import logo from './logo.svg'
 import './App.css'
 import { Place } from './Components/Place'
 
