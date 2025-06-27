@@ -1,10 +1,9 @@
 import { useQuery } from '@tanstack/react-query'
-import { getWordList } from './word.api'
+import { getWordList } from '../word.api'
 
 export const useGetWordList = () => {
   const {
-    isPending,
-    error,
+    isLoading,
     data: wordList
   } = useQuery({
     queryKey: ['repoData'],
@@ -15,6 +14,7 @@ export const useGetWordList = () => {
   })
 
   return {
-    wordList
+    wordList,
+    isLoading
   }
 }

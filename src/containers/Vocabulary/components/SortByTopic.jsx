@@ -1,6 +1,6 @@
 import React, { useCallback, useMemo, useState } from 'react'
 import { TOPIC } from '../../../const/topic'
-import { useGetWordList } from '../../../api/useGetWordList'
+import { useGetWordList } from '../../../api/wordList/useGetWordList'
 
 export const SortByTopic = ({ children }) => {
   const { wordList } = useGetWordList()
