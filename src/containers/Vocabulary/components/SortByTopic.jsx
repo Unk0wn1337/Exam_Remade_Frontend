@@ -3,7 +3,7 @@ import { TOPIC } from '../../../const/topic'
 import { useGetWordList } from '../../../api/wordList/useGetWordList'
 
 export const SortByTopic = ({ children }) => {
-  const { wordList } = useGetWordList()
+  const { wordList, isLoading } = useGetWordList()
   const [selectedTopic, setSelectedTopic] = useState(TOPIC.ALL)
 
   // if method optimization use useCallback
@@ -25,6 +25,8 @@ export const SortByTopic = ({ children }) => {
         <option value="1">nehéz</option>
         <option value="2">könnyű</option>
       </select>
+
+      {isLoading && <div>Loading..</div>}
 
       {children(filteredList)}
     </>
